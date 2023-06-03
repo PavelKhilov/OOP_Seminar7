@@ -20,10 +20,16 @@ public class Program {
         Master ivanov = new Master("Ivanov");
         Master petrov = new Master("Petrov");
         Student sidorov = new Student("Sidorov");
+        Student lebedev = new Student("Lebedev");
+        Junior sokolov = new Junior("Sokolov");
+        Junior novikov = new Junior("Novikov");
 
         jobAgency.registerObserver(ivanov);
         jobAgency.registerObserver(petrov);
         jobAgency.registerObserver(sidorov);
+        jobAgency.registerObserver(lebedev);
+        jobAgency.registerObserver(sokolov);
+        jobAgency.registerObserver(novikov);
 
         for(int i = 0; i < 10; i++){
             geekBrains.needEmployee();
