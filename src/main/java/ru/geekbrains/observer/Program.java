@@ -32,9 +32,9 @@ public class Program {
         jobAgency.registerObserver(novikov);
 
         for(int i = 0; i < 10; i++){
-            geekBrains.needEmployee();
-            google.needEmployee();
-            yandex.needEmployee();
+            geekBrains.needEmployee(geekBrains);
+            google.needEmployee(google);
+            yandex.needEmployee(yandex);
         }
 
     }

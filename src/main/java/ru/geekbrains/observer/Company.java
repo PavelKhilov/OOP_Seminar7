@@ -21,8 +21,22 @@ public class Company {
         random = new Random();
     }
 
-    public void needEmployee(){
-        double salary = random.nextDouble(3000, maxSalary);
-        jobAgency.sendOffer(nameCompany, salary);
+    public String getNameCompany() {
+        return nameCompany;
+    }
+
+    public double getMaxSalary() {
+        return maxSalary;
+    }
+
+    public Publisher getJobAgency() {
+        return jobAgency;
+    }
+
+    public void needEmployee(Company company){
+        Vacancy vacancy = new Vacancy();
+        vacancy.needVacancy(company);
+//        double salary = random.nextDouble(3000, maxSalary);
+//        jobAgency.sendOffer(nameCompany, salary);
     }
 }
