@@ -1,5 +1,6 @@
 package ru.geekbrains.observer;
 
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -33,10 +34,8 @@ public class Company {
         return jobAgency;
     }
 
-    public void needEmployee(Company company){
-        Vacancy vacancy = new Vacancy();
-        vacancy.needVacancy(company);
-//        double salary = random.nextDouble(3000, maxSalary);
-//        jobAgency.sendOffer(nameCompany, salary);
+    public void needEmployee(Company company, TypeVacancy listVacancy){
+        Vacancy vacancy = new Vacancy(company);
+        vacancy.needVacancy(company, listVacancy);
     }
 }

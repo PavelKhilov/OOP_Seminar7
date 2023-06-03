@@ -11,14 +11,14 @@ public class Master implements Observer{
     }
 
     @Override
-    public void receiveOffer(String nameCompany, double salary) {
+    public void receiveOffer(String nameCompany, double salary, String typeVacancy) {
         if(this.salary < salary){
-            System.out.printf("Специалист %s >>> Мне нужна эта работа! [%s - %f]\n",
-                    name, nameCompany, salary);
+            System.out.printf("Специалист %s >>> Мне нужна эта работа! [%s - %f - %s]\n",
+                    name, nameCompany, salary, typeVacancy);
             this.salary = salary;
         } else {
-            System.out.printf("Специалист %s >>> Я найду работу получше! [%s - %f]\n",
-                    name, nameCompany, salary);
+            System.out.printf("Специалист %s >>> Я найду работу получше! [%s - %f - %s]\n",
+                    name, nameCompany, salary, typeVacancy);
         }
     }
 }
